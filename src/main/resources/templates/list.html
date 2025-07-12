@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Employes</title>
+</head>
+<body>
+<h1>Employés</h1>
+<a th:href="@{/employees/new}">Ajouter un employé</a>
+<table>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.nom}"></td>
+        <td th:text="${employee.prenom}"></td>
+        <td>
+            <a th:href="@{/attestations/generate/{id}(id=${employee.id})}">
+                Générer attestation
+            </a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

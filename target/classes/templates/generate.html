@@ -1,0 +1,7 @@
+<form th:action="@{/attestations/generate/{employeeId}(employeeId=${employeeId})}" method="post">
+  <select name="type">
+    <option value="Travail">Attestation de Travail</option>
+    <option value="Salaire">Attestation de Salaire</option>
+  </select>
+  <button type="submit">Generer</button>
+</form>
